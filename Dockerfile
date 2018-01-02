@@ -5,5 +5,6 @@ FROM php:fpm-alpine
 LABEL maintainer="Rohit Goswami <rohit.1995@mail.ru>"
 LABEL name="organizr-php"
 
-RUN apk add php7-zip
+RUN apk update
+RUN apk add zlib-dev
 RUN docker-php-ext-install zip
