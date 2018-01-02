@@ -7,7 +7,7 @@ LABEL name="organizr-php"
 
 # Install requirements
 RUN apk update
-RUN apk add zlib-dev git
+RUN apk add zlib-dev
 RUN docker-php-ext-install zip
 
 # Setup
@@ -16,3 +16,5 @@ RUN getOrganizr.sh
 RUN chmod -R 777 /www
 RUN mkdir /config
 RUN chmod -R 777 /config
+
+VOLUME /www /config
