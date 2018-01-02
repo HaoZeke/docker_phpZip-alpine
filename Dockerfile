@@ -7,7 +7,7 @@ LABEL name="organizr-php"
 
 # Install requirements
 RUN apk update
-RUN apk add zlib-dev
+RUN apk add zlib-dev git
 RUN docker-php-ext-install zip
 
 # Setup
